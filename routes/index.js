@@ -6,7 +6,7 @@ const handlers = require('../handlers')
 module.exports = [
   {
     method: 'POST',
-    path: '/unoconv/{format}',
+    path: '/convert/{format}',
     config: {
       payload: {
         output: 'stream',
@@ -24,21 +24,21 @@ module.exports = [
   },
   {
     method: 'GET',
-    path: '/unoconv/formats',
+    path: '/convert/formats',
     config: {
       handler: handlers.showFormats
     }
   },
   {
     method: 'GET',
-    path: '/unoconv/formats/{type}',
+    path: '/convert/formats/{type}',
     config: {
       handler: handlers.showFormat
     }
   },
   {
     method: 'GET',
-    path: '/unoconv/versions',
+    path: '/convert/versions',
     config: {
       handler: handlers.showVersions
     }
